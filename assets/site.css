@@ -30,7 +30,7 @@ h1,h2,.xl{font-weight:400;font-size:clamp(30px,3.2vw,42px);line-height:1.04;lett
 .nav{grid-column:4/12;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:var(--g)}
 .nc{grid-column:span 3;display:flex;flex-direction:column;align-items:flex-start}.nc:last-child{grid-column:span 2}
 .nav a,.brand{transition:opacity .25s ease}.nav a:hover,.brand:hover{opacity:0}.nav a[aria-current]{color:var(--blue)}
-.lang{grid-column:12/13;justify-self:end}.lang span{color:#b5b2ac}
+.lang{grid-column:12/13;justify-self:end}.lang a{color:#b5b2ac;transition:opacity .25s ease}.lang a:hover{opacity:0}
 /* content: halves only */
 .row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g);align-items:start}
 .row+.row{margin-top:var(--gap)}.row.tight{margin-top:40px}
