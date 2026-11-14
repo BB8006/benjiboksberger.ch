@@ -26,7 +26,7 @@ h1,h2,.xl{font-weight:400;font-size:clamp(30px,3.2vw,42px);line-height:1.04;lett
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g)}
 /* header: quarters, the only Medium on the site */
 .top{padding:24px 0 40px;line-height:1.05;letter-spacing:-.015em;font-weight:500}
-.brand{grid-column:1/4;display:flex;gap:9px;align-items:center;align-self:start}.mk{height:44px;width:auto;flex:none}
+.brand{grid-column:1/4;display:flex;gap:9px;align-items:center;align-self:start}.brand i{font-style:normal;font-weight:400;color:var(--muted)}.mk{height:44px;width:auto;flex:none}
 .nav{grid-column:4/12;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:var(--g)}
 .nc{grid-column:span 3;display:flex;flex-direction:column;align-items:flex-start}.nc:last-child{grid-column:span 2}
 .nav a,.brand{transition:opacity .25s ease}.nav a:hover,.brand:hover{opacity:0}.nav a[aria-current]{color:var(--blue)}
