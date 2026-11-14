@@ -1,7 +1,7 @@
 (function(){
  // Privacy-friendly analytics: GoatCounter, no cookies. Only runs on the live domain.
  if(location.hostname!=='benjiboksberger.ch'&&location.hostname!=='www.benjiboksberger.ch')return;
- var E='https://benjiboksberger.goatcounter.com/count';
+ var E='https://bb8006.goatcounter.com/count';
  var q=new URLSearchParams(location.search);
  var ref=q.get('ref')||q.get('utm_source')||document.referrer||'';
  function send(p,t,ev){var i=new Image();i.src=E+'?p='+encodeURIComponent(p)+'&t='+encodeURIComponent(t)+'&r='+encodeURIComponent(ev?'':ref)+(ev?'&e=true':'')+'&s='+screen.width+'&rnd='+Math.random().toString(36).slice(2);}
