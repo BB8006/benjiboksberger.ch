@@ -25,8 +25,9 @@ h1,h2,.xl{font-weight:400;font-size:clamp(30px,3.2vw,42px);line-height:1.04;lett
 .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
 .grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:var(--g)}
 /* header: quarters, the only Medium on the site */
-.top{padding:24px 0 40px;line-height:1.12;letter-spacing:-.015em;font-weight:500}
-.brand{grid-column:1/4;display:flex;gap:9px;align-items:flex-start;align-self:start}.brand span{line-height:1.12;letter-spacing:-.01em}.brand i{font-style:normal;font-weight:400;color:var(--muted)}.mk{height:49px;width:auto;flex:none;margin-top:-1px}
+/* the header text scales with the window (15 to 21px), so the lockup always stays on two lines */
+.top{padding:24px 0 40px;font-size:clamp(15px,calc(2.27vw - 4.2px),21px);line-height:1.12;letter-spacing:-.015em;font-weight:500}
+.brand{grid-column:1/4;display:flex;gap:9px;align-items:flex-start;align-self:start}.brand span{line-height:1.12;letter-spacing:-.01em;white-space:nowrap}.brand i{font-style:normal;font-weight:400;color:var(--muted)}.mk{height:2.33em;width:auto;flex:none;margin-top:-1px}
 .nav{grid-column:4/12;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));column-gap:var(--g)}
 .nc{grid-column:span 3;display:flex;flex-direction:column;align-items:flex-start}.nc:last-child{grid-column:span 2}
 .nav a,.brand{transition:opacity .25s ease}.nav a:hover,.brand:hover{opacity:0}.nav a[aria-current]{color:var(--blue)}
@@ -76,8 +77,9 @@ footer p{margin:0}footer a{color:var(--ink);transition:opacity .25s ease}footer 
  :root{--g:12px;--gap:56px}
  body{font-size:19px}
  .wrap{padding:0 16px}
- .top{font-size:18px;padding:16px 0 28px;row-gap:18px}.mk{height:42px}
- .brand{grid-column:1/10}.lang{grid-column:10/13;grid-row:1}.nav{grid-column:1/13;grid-row:2;grid-template-columns:repeat(3,minmax(0,1fr))}.nc,.nc:last-child{grid-column:span 1}
+ /* phone header: one row. Mark only (the secondary logo), menu and language beside it */
+ .top{display:flex;align-items:flex-start;gap:clamp(10px,3.5vw,14px);font-size:clamp(12.5px,3.9vw,16px);padding:16px 0 28px}
+ .brand span{display:none}.nav{flex:1;display:flex;justify-content:space-between;column-gap:8px}.nav a{white-space:nowrap}.lang{margin-left:4px}
  .a,.b{grid-column:1/13}.a+.b{margin-top:40px}.split{padding-bottom:0}.place{font-size:11px;margin-right:3px}.stages{aspect-ratio:auto;padding-bottom:0}.story{aspect-ratio:auto}.pricing{margin-top:40px}.end{padding-bottom:0}.lo{padding-top:0}.q{grid-column:span 6}.q:nth-child(n+3){margin-top:12px}
 }
 @media (prefers-reduced-motion:reduce){.nav a,footer a{transition:none}}
